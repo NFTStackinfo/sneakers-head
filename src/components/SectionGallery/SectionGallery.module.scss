@@ -1,0 +1,39 @@
+@import "../../styles/mixins";
+
+.section {
+  width: 100%;
+  background-color: #000000;
+  position: relative;
+  z-index: 10;
+
+  margin-top: 100px;
+
+  @include screen($sm) {
+    margin-top: 140px;
+  }
+
+  .container {
+    .imgContainer {
+      width: 160px;
+      height: 144px;
+      background-color: #000000;
+      margin-right: 24px;
+      display: inline-block;
+
+      @include screen($sm){
+        width: 286px;
+        height: 258px;
+      }
+
+      img {
+       max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  @include screen($lg){
+    //margin-top: 140px;
+  }
+
+}
