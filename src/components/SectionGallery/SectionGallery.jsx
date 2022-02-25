@@ -1,17 +1,14 @@
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import s from './SectionGallery.module.scss'
 import Glide, {Autoplay} from '@glidejs/glide/dist/glide.modular.esm'
-import keyboard from "@glidejs/glide/dist/glide.modular.esm";
-import animationDuration from "@glidejs/glide/dist/glide.modular.esm";
-import animationTimingFunc from "@glidejs/glide/dist/glide.modular.esm";
 
 function AppSectionGallery(props) {
     const srcGallery = `/assets/images/gallery/`
     const gallery = [
-        `${srcGallery}g-1.jpg`, `${srcGallery}g-2.jpg`, `${srcGallery}g-3.jpg`,
-        `${srcGallery}g-4.jpg`, `${srcGallery}g-5.jpg`, `${srcGallery}g-6.jpg`,
-        `${srcGallery}g-7.jpg`, `${srcGallery}g-8.jpg`, `${srcGallery}g-9.jpg`,
-        `${srcGallery}g-10.jpg`, `${srcGallery}g-11.jpg`,
+        `${srcGallery}g-1.png`, `${srcGallery}g-2.png`, `${srcGallery}g-3.png`,
+        `${srcGallery}g-4.png`, `${srcGallery}g-5.png`, `${srcGallery}g-6.png`,
+        `${srcGallery}g-7.png`, `${srcGallery}g-8.png`, `${srcGallery}g-9.png`,
+        `${srcGallery}g-10.png`, `${srcGallery}g-11.png`,
     ];
     const [slidesPerView, setSlidesPerView] = useState(4)
     const [glide, setGlide] = useState(new Glide('.gallery-carousel', {
