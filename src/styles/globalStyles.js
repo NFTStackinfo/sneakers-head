@@ -110,6 +110,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.fonts.primary};
     font-size: ${({ theme }) => theme.fontSizes.lg};
     color: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.primaryGradient};
     font-weight: 400;
     line-height: 1.4;
   }
