@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const FAQStyle = styled.section`
   padding: 160px 0;
@@ -7,7 +7,24 @@ export const FAQStyle = styled.section`
     display: flex;
 
     .left {
-      width: 454px;
+      position: relative;
+      z-index: 1;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 130%;
+        height: 130%;
+        background-image: url(assets/blur.png);
+        background-size: 92%;
+        top: -20%;
+        z-index: -1;
+        left: -15%;
+      }
+      margin-right: 1.5rem;
+      img {
+        width: 100%;
+        max-width: 548px;
+      }
     }
 
     .right {
@@ -17,7 +34,7 @@ export const FAQStyle = styled.section`
   }
 
   .Collapsible {
-    border-bottom: 2px solid ${({ theme }) => theme.colors.black};
+    border-bottom: 1px solid #0fb7ff;
   }
 
   .Collapsible__trigger {
@@ -33,18 +50,24 @@ export const FAQStyle = styled.section`
 
   .Collapsible__contentInner {
     padding-bottom: 24px;
-    font-size: ${({ theme }) => theme.titleSizes.h4};
+    font-size: 16px;
+    user-select: none;
+    font-weight: 500;
   }
 
   .trigger-inner {
     position: relative;
-    font-weight: 700;
-    padding: 24px 40px 24px 0;
+    font-weight: 900;
+    padding: 16px 40px 30px 0;
     cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    text-transform: uppercase;
 
     .icon {
       position: absolute;
-      top: 20px;
+      top: 10px;
+      fill: white;
       right: 0;
       transition: 0.5s;
     }
@@ -75,4 +98,4 @@ export const FAQStyle = styled.section`
       }
     }
   }
-`
+`;

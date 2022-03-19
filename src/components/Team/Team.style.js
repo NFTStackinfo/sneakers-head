@@ -1,12 +1,11 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const TeamStyle = styled.section`
   padding: 120px 0;
-  background-color: ${({ theme }) => theme.colors.primary};
   overflow: hidden;
 
   .title {
-    padding-bottom: 48px;
+    padding-bottom: 80px;
     text-align: center;
   }
 
@@ -22,14 +21,19 @@ export const TeamStyle = styled.section`
   .name {
     font-family: ${({ theme }) => theme.fonts.secondary};
     padding-top: 4px;
-
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
     .icon {
       margin-left: 8px;
     }
   }
 
   .position {
-    font-size: ${({ theme }) => theme.fontSizes.sm};
+    margin-top: 4px;
+    font-size: 16px;
+    text-align: center;
   }
   .team-list {
     display: flex;
@@ -37,11 +41,16 @@ export const TeamStyle = styled.section`
   }
   .team-card {
     width: 262px;
+    min-width: 262px;
     margin-left: 24px;
-    padding: 16px;
-    border: 3px solid ${({ theme }) => theme.colors.black};
-    border-radius: 20px;
-    background-color: ${({ theme }) => theme.colors.white};
+    img {
+      max-width: 175px;
+      margin: 0 auto;
+    }
+  }
+
+  .main-artist {
+    margin: 0 auto;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
@@ -76,4 +85,4 @@ export const TeamStyle = styled.section`
       width: 100%;
     }
   }
-`
+`;

@@ -1,13 +1,15 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const HeaderStyle = styled.header`
-  background-color: ${({ theme }) => theme.colors.primary};
   height: 72px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 99;
+  transition: background-color 0.18s ease-out;
+  background-color: ${({ headerScrolled, theme }) =>
+    headerScrolled ? theme.colors.primary : 'transparent'};
 
   &.sticky {
     transition: box-shadow 0.3s;
@@ -83,8 +85,6 @@ export const HeaderStyle = styled.header`
     }
   }
 
-
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
-    
   }
-`
+`;
