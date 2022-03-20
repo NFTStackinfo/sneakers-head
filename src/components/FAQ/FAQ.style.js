@@ -12,10 +12,9 @@ export const FAQStyle = styled.section`
     display: flex;
 
     .left {
+      padding-top: 3rem;
       position: relative;
       z-index: 1;
-      display: flex;
-      align-items: center;
       margin-right: 1.5rem;
       .left-image {
         width: 100%;
@@ -112,7 +111,7 @@ export const FAQStyle = styled.section`
         }
       }
       .left-image {
-        margin: 40px auto;
+        margin: 0 auto;
       }
       .right {
         padding-left: 0;
