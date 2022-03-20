@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const RoadmapStyle = styled.div`
-  padding: 100px 0 300px;
+  padding: 100px 0;
 
   .title {
     display: flex;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const TeamStyle = styled.section`
-  padding: 120px 0;
+  padding: 100px 0;
   overflow: hidden;
 
   .title {
@@ -37,12 +37,15 @@ export const TeamStyle = styled.section`
   }
   .team-list {
     display: flex;
-    margin-left: -24px;
+    margin-left: -20px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .team-card {
     width: 262px;
     min-width: 262px;
-    margin-left: 24px;
+    margin-left: 20px;
+    margin-bottom: 42px;
     img {
       max-width: 175px;
       margin: 0 auto;
@@ -51,6 +54,7 @@ export const TeamStyle = styled.section`
 
   .main-artist {
     margin: 0 auto;
+    margin-bottom: 42px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}px) {

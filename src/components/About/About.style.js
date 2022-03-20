@@ -20,6 +20,19 @@ export const AboutStyle = styled.section`
 
   .content-top {
     display: flex;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 130%;
+      height: 130%;
+      background-size: 92%;
+      z-index: -1;
+      background-repeat: no-repeat;
+      background-image: url(assets/coming-soon/blur.png);
+      right: -25%;
+      top: -30%;
+    }
   }
   .content-bottom {
     margin-top: 200px;
@@ -27,13 +40,13 @@ export const AboutStyle = styled.section`
   }
 
   .content-bottom-image {
-    margin-right: 20px;
-    flex: 1 100%;
+    margin-right: 120px;
     position: relative;
+    flex: 1 100%;
     z-index: 1;
     img {
       width: 100%;
-      max-width: 542px;
+      min-width: 542px;
     }
     &::after,
     &::before {
@@ -43,6 +56,7 @@ export const AboutStyle = styled.section`
       height: 130%;
       background-size: 92%;
       z-index: -1;
+      background-repeat: no-repeat;
     }
     &::after {
       background-image: url(assets/blur.png);
@@ -56,8 +70,8 @@ export const AboutStyle = styled.section`
     }
   }
   .content-bottom-text {
+    flex: 1 100%;
     font-size: 32px;
-    font-style: normal;
     font-weight: 900;
     line-height: 40px;
     letter-spacing: 0.04em;

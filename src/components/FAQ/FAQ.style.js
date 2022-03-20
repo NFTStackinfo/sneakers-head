@@ -19,6 +19,7 @@ export const FAQStyle = styled.section`
         top: -20%;
         z-index: -1;
         left: -15%;
+        background-repeat: no-repeat;
       }
       margin-right: 1.5rem;
       img {
