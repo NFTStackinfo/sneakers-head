@@ -52,7 +52,7 @@ export const RoadmapStyle = styled.div`
       left: 0;
       border-radius: 100px;
     }
-    canvas {
+    .roadmap-video {
       position: absolute;
       width: 100% !important;
       height: 100% !important;

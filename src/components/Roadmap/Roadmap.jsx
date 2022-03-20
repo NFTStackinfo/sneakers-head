@@ -2,8 +2,6 @@ import React, { forwardRef, useState } from 'react';
 import { theme } from '../../styles/theme';
 import { RoadmapStyle } from './Roadmap.style';
 import { Fade } from 'react-awesome-reveal';
-import { init, render } from '../shader';
-import ShaderEffect from '../ShaderEffect/ShaderEffect';
 
 const cards = [
   {
@@ -26,7 +24,12 @@ const Roadmap = forwardRef((props, ref) => {
   const onCallback = (e) => {
     console.log(e);
   };
-  React.useEffect(() => {}, []);
+  React.useEffect(() => {
+    [0, 1, 2].forEach((val) => {
+      const ref = document.getElementById(`video${val}`);
+      ref.currentTime = (val + 1) * 5;
+    });
+  }, []);
   return (
     <RoadmapStyle ref={ref}>
       <div className='container'>
@@ -39,7 +42,17 @@ const Roadmap = forwardRef((props, ref) => {
               <div key={index} className='roadmap-card'>
                 <div className='card-image'>
                   <img src={`assets/roadmap/${index + 1}.png`} alt='' />
-                  <canvas id={'canvas' + index} />
+                  <video
+                    id={`video${index}`}
+                    className='roadmap-video'
+                    autoPlay
+                    muted
+                    playsInline
+                    loop
+                  >
+                    <source src='assets/shade.mp4' type='video/mp4'></source>
+                    <source src='assets/shade.webm' type='video/webm'></source>
+                  </video>
                 </div>
                 <div className='card-info'>
                   <span>{phase}</span>
