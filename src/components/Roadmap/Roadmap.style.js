@@ -90,6 +90,11 @@ export const RoadmapStyle = styled.div`
     .roadmap-card {
       flex-direction: column;
       margin-bottom: 24px;
+      .card-image {
+        min-width: unset;
+        width: 100%;
+        max-width: 300px;
+      }
     }
   }
 `;

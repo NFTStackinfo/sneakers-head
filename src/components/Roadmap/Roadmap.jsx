@@ -41,11 +41,18 @@ const Roadmap = forwardRef((props, ref) => {
                   <img src={`assets/roadmap/${index + 1}.png`} alt='' />
                   <canvas id={'canvas' + index} />
                 </div>
-                <div className='card-info'>
-                  <span>{phase}</span>
-                  <h4>{title}</h4>
-                  <p>{info}</p>
-                </div>
+                <Fade
+                  triggerOnce
+                  direction={'up'}
+                  fraction={0.5}
+                  duration={800}
+                >
+                  <div className='card-info'>
+                    <span>{phase}</span>
+                    <h4>{title}</h4>
+                    <p>{info}</p>
+                  </div>
+                </Fade>
               </div>
             ))}
           </div>

@@ -106,6 +106,7 @@ export const AboutStyle = styled.section`
       .image {
         img {
           max-width: 444px;
+          width: 100%;
         }
       }
     }
