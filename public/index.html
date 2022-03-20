@@ -283,29 +283,29 @@
       new THREE.PlaneBufferGeometry(2, 2),
       material);
 
-    material1 = new THREE.ShaderMaterial({
-      uniforms: uniforms1,
-      vertexShader: document.getElementById("vert-shader").textContent,
-      fragmentShader: document.getElementById("frag-shader").textContent
-    });
+   // material1 = new THREE.ShaderMaterial({
+   //   uniforms: uniforms1,
+   //   vertexShader: document.getElementById("vert-shader").textContent,
+   //   fragmentShader: document.getElementById("frag-shader").textContent
+  //  });
 
-    mesh1 = new THREE.Mesh(
-      new THREE.PlaneBufferGeometry(2, 2),
-      material1);
+  //  mesh1 = new THREE.Mesh(
+  //    new THREE.PlaneBufferGeometry(2, 2),
+  //    material1);
 
-    material2 = new THREE.ShaderMaterial({
-      uniforms: uniforms2,
-      vertexShader: document.getElementById("vert-shader").textContent,
-      fragmentShader: document.getElementById("frag-shader").textContent
-    });
+ //   material2 = new THREE.ShaderMaterial({
+ //     uniforms: uniforms2,
+ //     vertexShader: document.getElementById("vert-shader").textContent,
+ //     fragmentShader: document.getElementById("frag-shader").textContent
+ //   });
 
-    mesh2 = new THREE.Mesh(
-      new THREE.PlaneBufferGeometry(2, 2),
-      material2);
+  //  mesh2 = new THREE.Mesh(
+   //   new THREE.PlaneBufferGeometry(2, 2),
+   //   material2);
 
     scene.add(mesh);
-    scene1.add(mesh1);
-    scene2.add(mesh2);
+   // scene1.add(mesh1);
+   // scene2.add(mesh2);
 
     renderer = new THREE.WebGLRenderer({
       canvas: document.getElementById("canvas0")
@@ -325,13 +325,13 @@
     tick++;
     material.uniforms['time'].value = 0.00025 * tick;
     material.uniforms['deltaY'].value -= 0.0005;
-    material1.uniforms['time'].value = 0.00025 * tick + 2;
-    material1.uniforms['deltaY'].value -= 0.0003;
-    material2.uniforms['time'].value = 0.00025 * tick + 8;
-    material2.uniforms['deltaY'].value -= 0.0007;
+   // material1.uniforms['time'].value = 0.00025 * tick + 2;
+   // material1.uniforms['deltaY'].value -= 0.0003;
+  //  material2.uniforms['time'].value = 0.00025 * tick + 8;
+  //  material2.uniforms['deltaY'].value -= 0.0007;
     renderer.render(scene, camera);
-    renderer2.render(scene1, camera);
-    renderer3.render(scene2, camera);
+    renderer2.render(scene, camera);
+    renderer3.render(scene, camera);
     window.requestAnimationFrame(render);
   }
 
