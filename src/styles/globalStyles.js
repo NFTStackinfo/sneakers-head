@@ -126,6 +126,7 @@ export const GlobalStyle = createGlobalStyle`
 
   .main-wrapper {
     padding-top: 134px;
+    overflow-x: hidden;
   }
 
   /*typography*/
