@@ -29,9 +29,9 @@ export const AboutStyle = styled.section`
       background-size: 92%;
       z-index: -1;
       background-repeat: no-repeat;
-      background-image: url(assets/coming-soon/blur.png);
+      background-image: url(assets/coming-soon/blur-min.png);
       right: -25%;
-      top: -30%;
+      top: -35%;
     }
   }
   .content-bottom {
@@ -78,15 +78,17 @@ export const AboutStyle = styled.section`
     text-align: left;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 1;
   }
 
   .title {
-    padding-bottom: 48px;
-    text-align: center;
+    padding-bottom: 24px;
+    text-align: left;
   }
 
   .text {
-    padding-bottom: 40px;
+    padding-bottom: 24px;
     width: 80%;
 
     &.pull-right {
@@ -95,23 +97,71 @@ export const AboutStyle = styled.section`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
-    padding: 80px 0;
-    .text {
+    /* padding: 80px 0; */
+    /* .text {
       padding-bottom: 32px;
+    } */
+    .content-top {
+      /* flex-direction: column; */
+      .image {
+        img {
+          max-width: 444px;
+        }
+      }
     }
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}px) {
-    padding: 60px 0;
+    padding-bottom: 80px;
+    .content {
+      padding-bottom: unset;
+    }
+    .content-top {
+      flex-direction: column;
+      &::before {
+        right: -35%;
+        top: -15%;
+      }
+      .image {
+        margin-top: 1.5rem;
+        img {
+          max-width: 100%;
+          min-width: unset;
+        }
+      }
+    }
+    .content-bottom {
+      margin-top: 120px;
+      flex-direction: column;
+      .content-bottom-image {
+        order: 2;
+        margin-right: 0;
+        margin-top: 24px;
+      }
+      .content-bottom-text {
+        order: 1;
+      }
+    }
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
     .text {
-      padding-bottom: 24px;
       width: 100%;
-
-      &.pull-right {
-        margin-left: inherit;
+    }
+    .content-top {
+      &::before {
+        top: -20%;
+      }
+    }
+    .content-bottom {
+      .content-bottom-image {
+        img {
+          width: 100%;
+          min-width: unset;
+        }
+      }
+      .content-bottom-text {
+        order: 1;
       }
     }
   }

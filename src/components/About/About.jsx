@@ -2,6 +2,7 @@ import { forwardRef, useEffect, useRef, useState } from 'react';
 import { AboutStyle } from './About.style';
 import { Fade } from 'react-awesome-reveal';
 import { useOnScreen } from '../../hooks/useOnScreen';
+import { Button } from '../UIKit';
 
 const HaveIdea = forwardRef((props, ref) => {
   const [onScreen, setOnScreen] = useState(false);
@@ -39,6 +40,16 @@ const HaveIdea = forwardRef((props, ref) => {
                   We unified the most experienced people in the industry to
                   deliver a remarkable, cutting-edge product.
                 </p>
+              </Fade>
+              <Fade
+                triggerOnce
+                cascade
+                direction={'up'}
+                fraction={0.9}
+                delay={800}
+                duration={800}
+              >
+                <Button>Discover Now</Button>
               </Fade>
             </div>
             <div className='image'>

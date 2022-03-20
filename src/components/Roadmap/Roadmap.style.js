@@ -10,7 +10,8 @@ export const RoadmapStyle = styled.div`
     }
   }
 
-  .card-container {
+  .cards-container {
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
   }

@@ -113,6 +113,7 @@ export const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.colors.primaryGradient};
     font-weight: 400;
     line-height: 1.4;
+    overflow-x: hidden;
   }
 
   .container {
