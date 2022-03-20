@@ -9,7 +9,7 @@ export const theme = {
     white: '#ffffff',
   },
   fonts: {
-    primary: "'Poppins', sans-serif",
+    primary: "'Montserrat', sans-serif",
     secondary: "'Montserrat', sans-serif",
   },
   titleSizes: {

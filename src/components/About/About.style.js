@@ -12,7 +12,10 @@ export const AboutStyle = styled.section`
       justify-content: center;
     }
     .image {
+      width: 100%;
+      max-width: 548px;
       img {
+        width: 100%;
         max-width: 548px;
       }
     }

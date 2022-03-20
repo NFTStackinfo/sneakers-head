@@ -7,6 +7,7 @@ import FAQ from './components/FAQ/FAQ';
 import Roadmap from './components/Roadmap/Roadmap';
 import Team from './components/Team/Team';
 import Header from './components/Header/Header';
+import Preloader from './components/Preloader/Preloader';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -31,13 +32,6 @@ function App() {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-      setLocked(false);
-    }, 3800);
-  }, []);
-
-  useEffect(() => {
     if (scrollTo) {
       refMapping[scrollTo]?.current?.scrollIntoView({
         behavior: 'smooth',
@@ -50,8 +44,13 @@ function App() {
     setScrollTo(to);
   };
 
+  const handleLoad = () => {
+    setLoading(false);
+    setLocked(false);
+  };
   return (
     <main id='main'>
+      <Preloader handleLoad={handleLoad} />
       <Header onLinkClick={handleLinkClick} />
       <div className='main-wrapper'>
         <About ref={aboutRef} />
