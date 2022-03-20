@@ -114,6 +114,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     line-height: 1.4;
     overflow-x: hidden;
+    margin: 0;
   }
 
   .container {

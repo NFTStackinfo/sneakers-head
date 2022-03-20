@@ -16,7 +16,7 @@ const HaveIdea = forwardRef((props, ref) => {
   }, [aboutScreen]);
 
   return (
-    <AboutStyle ref={ref}>
+    <AboutStyle id='about' ref={ref}>
       <div className='container'>
         <div className='content'>
           <div className='content-top'>

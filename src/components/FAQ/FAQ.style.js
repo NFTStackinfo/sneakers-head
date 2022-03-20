@@ -3,28 +3,39 @@ import styled from 'styled-components';
 export const FAQStyle = styled.section`
   padding: 160px 0;
 
+  .title {
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+  }
   .faq-content {
     display: flex;
 
     .left {
       position: relative;
       z-index: 1;
-      &::after {
-        content: '';
-        position: absolute;
-        width: 130%;
-        height: 130%;
-        background-image: url(assets/blur.png);
-        background-size: 92%;
-        top: -20%;
-        z-index: -1;
-        left: -15%;
-        background-repeat: no-repeat;
-      }
+      display: flex;
+      align-items: center;
       margin-right: 1.5rem;
-      img {
+      .left-image {
         width: 100%;
         max-width: 548px;
+        position: relative;
+        img {
+          width: 100%;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          width: 130%;
+          height: 130%;
+          background-image: url(assets/blur.png);
+          background-size: 92%;
+          top: -20%;
+          z-index: -1;
+          left: -15%;
+          background-repeat: no-repeat;
+        }
       }
     }
 
@@ -76,7 +87,9 @@ export const FAQStyle = styled.section`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
     padding: 120px 0;
-
+    .title {
+      margin-bottom: 24px;
+    }
     .faq-content {
       .left {
         width: 360px;
@@ -89,14 +102,26 @@ export const FAQStyle = styled.section`
       flex-direction: column;
       .left {
         width: 100%;
-
+        margin: 0 auto;
+        order: 2;
+        img {
+          max-width: unset;
+        }
         .title {
           padding-bottom: 12px;
         }
       }
+      .left-image {
+        margin: 40px auto;
+      }
       .right {
         padding-left: 0;
       }
+    }
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+    .left-image {
+      margin: 24px auto;
     }
   }
 `;

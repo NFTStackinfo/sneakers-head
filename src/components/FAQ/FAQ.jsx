@@ -31,6 +31,11 @@ const data = [
     answer:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisi id neque volutpat maximus eget egestas quam.',
   },
+  {
+    question: 'What will be the use of the NFT mint proceeds?',
+    answer:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisi id neque volutpat maximus eget egestas quam.',
+  },
 ];
 const FAQ = forwardRef((props, ref) => {
   const [openPosition, setOpenPosition] = useState(null);
@@ -47,9 +52,20 @@ const FAQ = forwardRef((props, ref) => {
       <div className='container'>
         <div className='faq-content'>
           <div className='left'>
-            <img src='/assets/faqImg.png' alt='' />
+            <div className='left-image'>
+              <img src='/assets/faqImg.png' alt='' />
+            </div>
           </div>
           <div className='right'>
+            <Fade
+              triggerOnce
+              direction={'up'}
+              fraction={0.8}
+              duration={1000}
+              delay={0}
+            >
+              <h1 className='title'>FAQ</h1>
+            </Fade>
             {data.map((q, i) => {
               return (
                 <Collapsible

@@ -51,7 +51,7 @@ function App() {
   };
 
   return (
-    <main>
+    <main id='main'>
       <Header onLinkClick={handleLinkClick} />
       <div className='main-wrapper'>
         <About ref={aboutRef} />

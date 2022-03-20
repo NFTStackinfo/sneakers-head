@@ -21,7 +21,7 @@ const Header = ({ onLinkClick }) => {
       <div className='container'>
         <div className='header-content'>
           <div className='logo-wrapper'>
-            <a className='logo' href={'#'}>
+            <a className='logo' href={'#main'}>
               <img src='logo.png' alt='BamBoozles' />
             </a>
           </div>

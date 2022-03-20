@@ -120,12 +120,12 @@ export const AboutStyle = styled.section`
       flex-direction: column;
       &::before {
         right: -35%;
-        top: -15%;
+        top: -20%;
       }
       .image {
+        margin: 0 auto;
         margin-top: 1.5rem;
         img {
-          max-width: 100%;
           min-width: unset;
         }
       }
@@ -157,6 +157,7 @@ export const AboutStyle = styled.section`
       .content-bottom-image {
         img {
           width: 100%;
+          max-width: 540px;
           min-width: unset;
         }
       }

@@ -38,7 +38,8 @@ const Roadmap = forwardRef((props, ref) => {
             {cards.map(({ phase, title, info }, index) => (
               <div key={index} className='roadmap-card'>
                 <div className='card-image'>
-                  <img src={`assets/roadmap/${1}.png`} alt='' />
+                  <img src={`assets/roadmap/${index + 1}.png`} alt='' />
+                  <canvas id={'canvas' + index} />
                 </div>
                 <div className='card-info'>
                   <span>{phase}</span>
@@ -50,7 +51,6 @@ const Roadmap = forwardRef((props, ref) => {
           </div>
         </div>
       </div>
-      {/* <ShaderEffect /> */}
     </RoadmapStyle>
   );
 });

@@ -53,7 +53,7 @@ export const TeamStyle = styled.section`
   }
 
   .main-artist {
-    margin: 0 auto;
+    margin: 24px auto !important;
     margin-bottom: 42px;
   }
 
@@ -65,15 +65,14 @@ export const TeamStyle = styled.section`
   @media (max-width: ${({ theme }) => theme.breakpoints.md}px) {
     padding: 80px 0;
     .team-list {
-      justify-content: space-between;
       flex-wrap: wrap;
-      margin-left: -16px;
+      margin-left: -24px;
     }
     .team-card {
-      width: calc((100% / 2) - 16px);
-      margin-left: 16px;
-      margin-bottom: 16px;
-
+      width: 170px;
+      margin-left: 24px;
+      margin-bottom: 24px;
+      min-width: unset;
       &:nth-child(even) {
         margin-top: 0;
       }
