@@ -88,6 +88,7 @@ export const AboutStyle = styled.section`
   .title {
     padding-bottom: 24px;
     text-align: left;
+    font-family: ${({ theme }) => theme.fonts.secondary};
   }
 
   .text {

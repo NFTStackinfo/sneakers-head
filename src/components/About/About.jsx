@@ -3,6 +3,7 @@ import { AboutStyle } from './About.style';
 import { Fade } from 'react-awesome-reveal';
 import { useOnScreen } from '../../hooks/useOnScreen';
 import { Button } from '../UIKit';
+import { navigateTo } from '../../utils/utils';
 
 const HaveIdea = forwardRef((props, ref) => {
   const [onScreen, setOnScreen] = useState(false);
@@ -49,14 +50,16 @@ const HaveIdea = forwardRef((props, ref) => {
                 delay={800}
                 duration={800}
               >
-                <Button>Discover Now</Button>
+                <Button onClick={navigateTo} href='#info'>
+                  Discover Now
+                </Button>
               </Fade>
             </div>
             <div className='image'>
               <img src='/assets/goldHead.png' alt='' />
             </div>
           </div>
-          <div className='content-bottom'>
+          <div className='content-bottom' id='info'>
             <div className='content-bottom-image'>
               <img src='assets/faces.png' alt='faces' />
             </div>

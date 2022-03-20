@@ -35,7 +35,7 @@ export const HeaderStyle = styled.header`
   .logo {
     max-width: 204px;
     display: block;
-
+    padding: 10px 10px 10px 0;
     img {
       width: 100%;
       display: block;

@@ -12,7 +12,7 @@ export const FAQStyle = styled.section`
     display: flex;
 
     .left {
-      padding-top: 3rem;
+      margin-top: 124px;
       position: relative;
       z-index: 1;
       margin-right: 1.5rem;
@@ -74,7 +74,7 @@ export const FAQStyle = styled.section`
     font-size: 16px;
     user-select: none;
     text-transform: uppercase;
-
+    font-family: ${({ theme }) => theme.fonts.secondary};
     .icon {
       position: absolute;
       top: 10px;
@@ -97,11 +97,13 @@ export const FAQStyle = styled.section`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}px) {
+    padding: 80px 0;
     .faq-content {
       flex-direction: column;
       .left {
+        margin: 40px auto;
         width: 100%;
-        margin: 0 auto;
+
         order: 2;
         img {
           max-width: unset;

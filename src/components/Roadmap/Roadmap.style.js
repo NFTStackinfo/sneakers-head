@@ -24,6 +24,10 @@ export const RoadmapStyle = styled.div`
   }
   .roadmap-card {
     display: flex;
+    margin-bottom: 48px;
+    &:last-child {
+      margin-bottom: unset;
+    }
   }
 
   .card-image {
@@ -34,7 +38,7 @@ export const RoadmapStyle = styled.div`
     height: 300px;
     align-items: center;
     position: relative;
-    border-radius: 100px;
+    border-radius: 50%;
     overflow: hidden;
     img {
       width: 100%;
@@ -46,20 +50,21 @@ export const RoadmapStyle = styled.div`
       position: absolute;
       width: 100% !important;
       height: 100% !important;
-      box-shadow: inset 1px 0px 19px 20px #100729;
+      box-shadow: rgb(16 7 41) 1px 0px 20px 25px inset;
       z-index: 1;
       top: 0;
       left: 0;
-      border-radius: 100px;
+      border-radius: 50%;
     }
     .roadmap-video {
       position: absolute;
       width: 100% !important;
       height: 100% !important;
-      border-radius: 110px;
+      border-radius: 50%;
       z-index: 0;
       top: 0;
       left: 0;
+      padding: 4px;
     }
   }
 
@@ -94,6 +99,20 @@ export const RoadmapStyle = styled.div`
         min-width: unset;
         width: 100%;
         max-width: 300px;
+      }
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xs}px) {
+    .roadmap-card {
+      .card-image {
+        min-width: unset;
+        width: 100%;
+        max-width: 250px;
+        height: 250px;
+        img {
+          width: 150px;
+        }
       }
     }
   }

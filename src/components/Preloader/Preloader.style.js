@@ -42,15 +42,18 @@ export const PreloaderStyle = styled.div`
   .CircularProgressbar-text {
     font-size: 2rem;
   }
+
   .progress {
     border-radius: 50%;
     overflow: hidden;
     width: 210px;
     position: relative;
     img {
-      width: 80px;
+      width: 120px;
     }
-
+    div[data-test-id='CircularProgressbarWithChildren__children'] {
+      margin-top: -105% !important;
+    }
     /* @include mq(sm) {
       width: 180px;
       position: relative;
