@@ -13,7 +13,8 @@ const SpaceShip = () => {
     new GLTFLoader().load('/1k.glb', setModel);
   }, []);
   if (model) {
-    model.scene.anisotropy = 16;
+    model.scene.anisotropy = 32;
+    model.scene.rotateOnAxis(new THREE.Vector3(1,0,0), -7* Math.PI / 180)
   }
 
   console.log(model);
@@ -52,11 +53,11 @@ export default function AirModel() {
       {isBrowser && (
         <Canvas
           style={{ width: '100%', height: '100%' }}
-          camera={{ position: [0, 0, 22] }}
+          camera={{ position: [0, 0, 100] , fov: 20}}
           onCreated={({ gl }) => {
             gl.shadowMap.enabled = true;
-            gl.anisotropy = 16;
-            gl.shadowMap.type = THREE.PCFSoftShadowMap;
+            gl.anisotropy = 32;
+            gl.shadowMap.type = THREE.VSMShadowMap;
           }}
         >
           <ambientLight intensity={0.3} color='0xffffff' />
