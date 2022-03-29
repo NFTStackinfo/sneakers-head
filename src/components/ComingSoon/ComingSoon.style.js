@@ -1,39 +1,52 @@
 import styled from 'styled-components';
 
 export const ComingSoonStyle = styled.main`
-  background: url('assets/coming-soon/coming-bg.png');
-  background-position: center center;
+  background: url('assets/coming-soon/coming-bg.jpg') center center;
   background-size: cover;
   position: relative;
   font-family: 'Exo 2', sans-serif;
-  font-weight: 250;
-  .content {
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-    padding: 80px 60px;
-    position: relative;
-    z-index: 1;
-  }
-  span {
-    font-weight: 200;
-    font-size: 16px;
-    a {
-      text-decoration: underline;
-      font-weight: 40;
+  font-weight: 200;
+  min-height: 100vh;
+
+  .img-abs {
+    position: absolute;
+    
+    &.cloud1 {
+      top: 0;
+      left: 0;
+    }
+    
+    &.cloud2 {
+      bottom: 0;
+      right: 120px;
+      width: 370px;
+      height: 110px;
+      object-position: top;
+      object-fit: cover;
+    }
+    
+    &.head1 {
+      top: 70px;
+      right: 0;
+    }
+    &.head2 {
+      bottom: 0;
+      right: 0;
+      width: 142px;
+      height: 256px;
+      object-position: left;
+      object-fit: cover;
     }
   }
+
   .top {
-    font-size: 21px;
-    letter-spacing: 30px;
-    position: absolute;
-    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    top: 40px;
+    padding-top: 48px;
+    
     ul {
       margin-top: 20px;
       display: flex;
@@ -68,9 +81,38 @@ export const ComingSoonStyle = styled.main`
       }
     }
   }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 60px 80px;
+    position: relative;
+    z-index: 1;
+  }
+  span {
+    font-weight: 200;
+    font-size: 16px;
+    a {
+      text-decoration: underline;
+      font-weight: 400;
+      margin-left: 4px;
+    }
+  }
+
+  .title-wrapper {
+    max-width: 475px;
+    padding: 0 24px;
+    width: 100%;
+    
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
   .left {
     width: 480px;
     height: 640px;
+    
   }
   .right {
     flex: 1;
@@ -78,11 +120,9 @@ export const ComingSoonStyle = styled.main`
     max-width: 670px;
     .title {
       display: inline-block;
-      text-transform: capitalize;
       font-weight: 400;
       font-size: 120px;
       font-family: 'Fugaz one', cursive;
-      letter-spacing: 0;
       text-transform: uppercase;
       text-align: end;
       line-height: 80%;
@@ -93,6 +133,7 @@ export const ComingSoonStyle = styled.main`
       font-weight: 200;
       font-size: 16px;
       margin: 32px 0;
+      letter-spacing: 0.08em
     }
   }
 
@@ -105,8 +146,23 @@ export const ComingSoonStyle = styled.main`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
-    &:after {
-      background-position: 100px 0;
+    .img-abs {
+
+
+      &.cloud2 {
+        width: 306px;
+        height: 90px;
+      }
+
+      &.head1 {
+        width: 114px;
+        top: 98px;
+      }
+      &.head2 {
+        width: 100px;
+        height: 184px;
+        bottom: 28px;
+      }
     }
     .left {
       padding-bottom: 48px;
@@ -122,14 +178,31 @@ export const ComingSoonStyle = styled.main`
     }
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.md}px) {
-    &:after {
-      background-position: 100px 0;
-    }
 
+    .img-abs {
+      
+      &.cloud2 {
+        width: 306px;
+        height: 90px;
+      }
+
+      &.head1 {
+        height: 140px;
+        width: 90px;
+        object-position: left;
+        object-fit: cover;
+        top: 50%;
+      }
+      &.head2 {
+        width: 100px;
+        height: 184px;
+        bottom: 28px;
+      }
+    }
+    
     .content {
       flex-direction: column;
-      padding: 80px 40px;
-      padding-top: 128px;
+      padding: 16px 40px 140px;
       .top {
         top: 30px;
       }
@@ -149,19 +222,26 @@ export const ComingSoonStyle = styled.main`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
-    &:after {
-      background-position: -50px 0;
+    .img-abs {
+      &.cloud1 {
+        width: 245px;
+        height: 287px;
+        object-fit: cover;
+        object-position: right;
+        top: 77px;
+      }
+
+      &.head1 {
+        width:70px;
+      }
+
     }
     .left {
       width: 100%;
       height: 408px;
     }
-    h4 {
-      letter-spacing: 15px;
-    }
     .content {
-      padding: 80px 20px;
-      padding-top: 128px;
+      padding: 16px 20px 140px;
     }
     .right {
       .title {
@@ -173,11 +253,7 @@ export const ComingSoonStyle = styled.main`
     &:after {
       background-position: -50px 0;
     }
-    h4 {
-      letter-spacing: 10px;
-    }
     .content {
-      padding-top: 80px;
       .left {
         width: 100%;
         height: 300px;
