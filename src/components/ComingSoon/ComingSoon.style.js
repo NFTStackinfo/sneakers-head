@@ -112,7 +112,11 @@ export const ComingSoonStyle = styled.main`
   }
   .left {
     width: 480px;
-    height: 640px;
+    //height: 640px;
+    
+    img {
+      width: 100%;
+    }
     
   }
   .right {
@@ -168,7 +172,6 @@ export const ComingSoonStyle = styled.main`
     .left {
       padding-bottom: 48px;
       width: 400px;
-      height: 532px;
     }
     .right {
       padding-left: 0;
@@ -212,7 +215,6 @@ export const ComingSoonStyle = styled.main`
       padding-left: 0;
       padding-bottom: 40px;
       max-width: 426px;
-      height: 566px;
     }
     .right {
       padding-left: 0;
@@ -239,7 +241,7 @@ export const ComingSoonStyle = styled.main`
     }
     .left {
       width: 100%;
-      height: 408px;
+      //height: 408px;
     }
     .content {
       padding: 16px 20px 140px;
@@ -257,7 +259,7 @@ export const ComingSoonStyle = styled.main`
     .content {
       .left {
         width: 100%;
-        height: 300px;
+        //height: 300px;
       }
       .right {
         .title {

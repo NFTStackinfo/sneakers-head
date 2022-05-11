@@ -33,7 +33,8 @@ const ComingSoon = () => {
       <div className='content'>
 
         <div className='left'>
-          <AirModel />
+          {/*<AirModel />*/}
+            <img src="assets/coming-soon/model.png" alt="Sneakers Head"/>
         </div>
         <div className='right'>
           <div>
