@@ -48,7 +48,7 @@ function Preloader({ handleLoad }) {
     <PreloaderStyle>
       <div className='progress'>
         <CircularProgressbarWithChildren value={value}>
-          <img src={'assets/roadmap/3.png'} alt='loader' />
+          <img src="assets/coming-soon/model-sm.png" alt='loader' />
         </CircularProgressbarWithChildren>
       </div>
       <span>{value.toFixed()}%</span>
